@@ -1,11 +1,11 @@
 import torch
 import torch.nn as nn
 import numpy as np
-from sklearn import datasets
+from sklearn.datasets import load_boston
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
-bc = datasets.load_breast_cancer()
+bc = datasets.load_boston()
 X, y = bc.data, bc.target
 
 n_samples, n_features = X.shape
